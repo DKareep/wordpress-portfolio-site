@@ -1,8 +1,10 @@
 <?php
 function themeStyles(){
-	wp_enqueue_style('main', get_template_directory_uri(). '/style.css');
+
 	wp_enqueue_style('grid', get_template_directory_uri(). '/css/grid.css');
     wp_enqueue_style('normalize', get_template_directory_uri(). '/css/normalize.css');
+
+    wp_enqueue_style('main', get_template_directory_uri(). '/style.css');
     wp_enqueue_style('google-fonts', 'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic');
 
     wp_register_style('flex-slider',get_template_directory_uri(),'/css/flexslider.css');

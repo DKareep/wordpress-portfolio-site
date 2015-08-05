@@ -10,22 +10,31 @@
          ?>
 
     </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <?php wp_head() ;?>
 </head>
 <body>
+<div class="container clearfix">
+    <header>
+        <div class="grid_12 omega none">
+            <hgroup>
+                <h1><a href="index.html">Dijin Kareep</a></h1>
 
-<?php
+                <h2>Web Designer, Design Thinker</h2>
+            </hgroup>
+        </div>
+        <div class="grid_12 omega">
+            <nav>
 
-$args = array(
-    'menu' => 'main-menu'
+                <?php
+                $args = array(
+                    'menu' => 'main-menu',
+                    'echo' => false
 
-);
+                );
+               echo strip_tags(wp_nav_menu($args),'<a>'); ?>
+            </nav>
+        </div>
+    </header>
 
 
-wp_nav_menu($args);
-
-?>
-
-
-<p>Header content inserted</p>
