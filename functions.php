@@ -8,10 +8,12 @@ function themeStyles(){
     wp_enqueue_style('google-fonts', 'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic');
 
     wp_register_style('flex-slider',get_template_directory_uri(),'/css/flexslider.css');
-
+    wp_enqueue_style('ss-social', get_template_directory_uri(). '/css/ss-social.css');
     if(is_page('Home')){
         wp_enqueue_style('flex-slider');
     }
+
+
 }
 function themeScripts(){
     wp_register_script('flex-slider-script',get_template_directory_uri(). '/js/flexslider.js',array('jquery'),'',true);
@@ -19,8 +21,8 @@ function themeScripts(){
     if(is_page('Home')){
         wp_enqueue_script('flex-slider-script');
     }
-
-    wp_enqueue_script('theme',get_template_directory_uri(). 'js/theme.js', array('jquery'),'',true);
+wp_enqueue_script('ss-social-script', get_template_directory_uri(). '/js/ss-social.js','','',true);
+    wp_enqueue_script('theme',get_template_directory_uri(). '/js/theme.js', array('jquery'),'',true);
 }
 
 
