@@ -18,9 +18,9 @@
     <header>
         <div class="grid_12 omega none">
             <hgroup>
-                <h1><a href="index.html">Dijin Kareep</a></h1>
+                <h1 style="text-transform: none;"><a href="<?php bloginfo('siteurl'); ?>"><?php bloginfo('name');?></a></h1>
 
-                <h2>Web Designer, Design Thinker</h2>
+                <h2><?php bloginfo('description'); ?></h2>
             </hgroup>
         </div>
         <div class="grid_12 omega">
